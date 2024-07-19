@@ -70,7 +70,9 @@
         "timestampUrl": "",
         "allowDowngrades": false,
         "wix": {
-          "language": "en-US"
+          "language": "en-US",
+          "bannerPath": "../src/assets/images/installer/banner.png",
+          "dialogImagePath": "../src/assets/images/installer/dialogImage.png"
         }
       }
     },
