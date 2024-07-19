@@ -1,7 +1,7 @@
 [package]
 name = "chroma"
 version = "1.0.0"
-description = "Chroma is a Chromium browser updater application"
+description = "Chroma is an application built for installing and managing the Chromium browser"
 authors = ["Sandun Wiratunga"]
 license = "MIT"
 repository = "https://github.com/sandunwira/Chroma"

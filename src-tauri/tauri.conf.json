@@ -47,7 +47,7 @@
       ],
       "identifier": "Chroma",
       "shortDescription": "Chroma",
-      "longDescription": "Chroma is a Chromium browser updater application",
+      "longDescription": "Chroma is an application built for installing and managing the Chromium browser",
       "resources": [],
       "externalBin": [],
       "targets": "all",
