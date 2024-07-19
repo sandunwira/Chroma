@@ -1,0 +1,105 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "Chroma",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "minimize": true,
+        "unminimize": true,
+        "startDragging": true
+      },
+      "fs": {
+        "all": true
+      },
+      "notification": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "publisher": "Sandun Wiratunga",
+      "category": "Utility",
+      "copyright": "Sandun Wiratunga",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "Chroma",
+      "shortDescription": "Chroma",
+      "longDescription": "Chroma is a Chromium browser updater application",
+      "resources": [],
+      "externalBin": [],
+      "targets": "all",
+      "deb": {
+        "depends": []
+      },
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "appimage": {
+        "bundleMediaFramework": true
+      },
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": "",
+        "allowDowngrades": false,
+        "wix": {
+          "language": "en-US"
+        }
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": true,
+      "dialog": true,
+      "endpoints": [
+        "https://raw.githubusercontent.com/sandunwira/TauriUpdater/main/chroma.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      },
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDIxMEI5MkVENzcwRUFEMjMKUldRanJRNTM3WklMSWJtNkxuWHRyeW5BZVkyOXFXR09WU3J3d2ttd2ppSXg4U3lVNFp3NUF5T24K"
+    },
+    "windows": [
+      {
+        "title": "Chroma",
+        "minWidth": 1000,
+        "minHeight": 600,
+        "url": "index.html",
+        "fullscreen": false,
+        "focus": true,
+        "resizable": true,
+        "decorations": false,
+        "center": true
+      }
+    ]
+  }
+}

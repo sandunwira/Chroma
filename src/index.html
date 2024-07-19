@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/fonts.css">
+
+	<script type="module" src="/main.js" defer></script>
+
+	<!-- PRELOADING CSS/JS/JSON -->
+	<link rel="preload" href="css/fonts.css" as="style" type="text/css">
+	<link rel="preload" href="css/style.css" as="style" type="text/css">
+	<!-- PRELOADING FONTS -->
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Bold.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-BoldIta.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Light.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-LightIta.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-MedIta.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Medium.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-RegIta.otf" as="font" type="font/otf" crossorigin>
+	<link rel="preload" href="assets/fonts/HelveticaNowDisplay-Regular.otf" as="font" type="font/otf" crossorigin>
+	<!-- PRELOADING UI ICONS -->
+	<link rel="preload" href="assets/images/ui/check.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/close.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/delete.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/download.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/external.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/github.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/loader.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/minimize.svg" as="image" type="image/svg+xml">
+	<link rel="preload" href="assets/images/ui/refresh.svg" as="image" type="image/svg+xml">
+	<!-- PRELOADING IMAGES -->
+	<link rel="preload" href="assets/images/logo-text.png" as="image" type="image/png">
+	<link rel="preload" href="assets/images/logo.png" as="image" type="image/png">
+	<!-- PREFETCHING PAGES -->
+	<link rel="prefetch" href="index.html" as="document">
+
+</head>
+
+<body>
+
+	<div class="flex flexCol" style="height: 100vh; width: 100%; background: #242424; position: fixed; top: 0; align-items: center; justify-content: center;">
+
+		<div id="titlebar" class="flex" style="width: 100%; height: 35px; align-items: center; justify-content: center;">
+			<div class="titlebarContainer flex" style="width: 100%; height: 100%; align-items: center; justify-content: space-between;">
+				<div class="flex flexRow" style="height: 100%; align-items: center; justify-content: center; padding-left: 10px; gap: 6px;">
+					<span class="flex flexRow" style="height: 100%; align-items: center; gap: 3px;">
+						<img style="height: 9px; margin-bottom: 1px;" src="assets/images/logo.png">
+						<img style="height: 10px; margin-top: 1px;" src="assets/images/logo-text.png">
+					</span>
+
+					<span class="flex" style="height: 100%; font-size: 10px; font-family: var(--light); color: #B0B0B0; align-items: center;">v1.0.0</span>
+				</div>
+
+				<div style="height: 100%; display: flex; flex-direction: row; align-items: center; gap: 20px; z-index: 10;">
+					<a class="titlebarBtn flex" title="Chroma GitHub Repository" style="color: #ECECEC; text-decoration: none;" href="https://github.com/sandunwira/Chroma" target="_blank">
+						<img style="height: 10px;" src="assets/images/ui/github.svg">
+						<span style="font-family: var(--light); font-size: 10px; letter-spacing: 0.5px;">GitHub</span>
+						<img style="height: 10px;" src="assets/images/ui/external.svg">
+					</a>
+
+					<div class="flex flexRow" style="height: 100%;">
+						<div id="titlebar-minimize" title="Minimize" class="flex" style="height: 100%; width: 40px; align-items: center; justify-content: center;">
+							<img style="width: 8px;" src="assets/images/ui/minimize.svg">
+						</div>
+
+						<div id="titlebar-close" title="Close" class="flex" style="height: 100%; width: 40px; align-items: center; justify-content: center;">
+							<img style="width: 8px;" src="assets/images/ui/close.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-tauri-drag-region style="position: fixed; top: 5px; left: 0; background: transparent; height: 25px; width: calc(100% - 120px);"></div>
+
+
+		<div class="flex flexCol" style="height: calc(100% - 35px); width: 100%; align-items: center; justify-content: center; gap: 50px;">
+			<div class="flex flexCol" style="align-items: center; gap: 50px;">
+				<div class="flex flexCol" style="align-items: center;">
+					<div class="flex flexRow" style="height: 80px; align-items: center; gap: 8px;">
+						<img src="assets/images/logo.png" style="height: 60%;">
+						<img src="assets/images/logo-text.png" style="height: 80%; margin-top: 2.5%;">
+					</div>
+					<p>Chroma is an application built for installing and managing the Chromium browser</p>
+				</div>
+
+				<div class="flex flexRow" style="justify-content: center; gap: 10px;">
+					<button id="openChromium" style="font-size: 16px;" title="Open Chromium browser">
+						<img src="assets/images/ui/external.svg">
+						Open Chromium
+					</button>
+
+					<button id="checkUpdates" style="font-size: 16px;" title="Check updates for your current Chromium installation">
+						<img src="assets/images/ui/refresh.svg">
+						Check for Updates
+					</button>
+
+					<button id="uninstallChromium" style="font-size: 16px;" title="Uninstall Chromium browser">
+						<img src="assets/images/ui/delete.svg">
+						Uninstall Chromium
+					</button>
+				</div>
+
+				<div class="flex flexCol" style="align-items: center;">
+					<p style="font-size: 12px;">Current Chromium Version:</p>
+					<p id="chromiumVersion" style="font-size: 16px; font-family: var(--regular);">Loading...</p>
+				</div>
+			</div>
+
+			<hr style="width: 80%; border: 1px dashed #424242;">
+
+			<div class="flex flexCol" style="align-items: center; gap: 4px;">
+				<button id="downloadChromium" title='Chromium Browser will be installed to "C:\Chromium Project\Chromium"'>
+					<img src="assets/images/ui/download.svg">
+					Download Chromium Browser
+				</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
